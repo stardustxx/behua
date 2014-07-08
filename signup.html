@@ -24,7 +24,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/">MissWallFlower</a>
+      <a class="navbar-brand" href="index.html">MissWallFlower</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -53,11 +53,38 @@
 </nav>
 
 <div class = "container">
-  <div class = "jumbotron tbCenter">
-  	<p> Welcome to Behua </p>
-  	<a class="btn btn-default" href="#">Log In</a>
-		<a class="btn btn-primary" href="signup.html">Sign Up</a>
-  </div>
+		<div class = "panel panel-default">
+	<div class="panel-heading">
+		<h2>Sign up</h2>
+	</div>
+	<div class = "panel-body">
+ <form role = "form">
+		  <div class = "form-group"><label for="user_name">Name</label><br />
+      	  <input class="form-control" id="user_name" name="user[name]" type="text" />
+      </div>
+
+		  <div class = "form-group">
+		  	<label for="user_email">Email</label><br />
+		    <input autofocus="autofocus" class="form-control" id="user_email" name="user[email]" type="email" value="" />
+		  </div>
+
+		  <div class = "form-group">
+		  	<label for="user_password">Password</label><br />
+		    <input autocomplete="off" class="form-control" id="user_password" name="user[password]" type="password" />
+		  </div>
+
+		  <div class = "form-group">
+		  	<label for="user_password_confirmation">Password confirmation</label><br />
+		    <input autocomplete="off" class="form-control" id="user_password_confirmation" name="user[password_confirmation]" type="password" />
+		  </div>
+
+		  <div class = "form-group">
+		  	<input class="btn btn-primary" name="commit" type="submit" value="Sign up" /></div>
+</form>	</div>
+
+	<div class = "panel-footer">
+		  <a href="/users/sign_in">Already a user?</a><br />
+	</div>
 </div>
 
 
