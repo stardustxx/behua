@@ -19,10 +19,11 @@ body {
 .item {
     margin: 10px;
     float: left;
-    width: 220px;
+    width: 150px;
+    box-shadow: 10px 10px 5px #888888;
 }
 
-.item img {
+.imgs img {
     max-width: 100%;
 }
 

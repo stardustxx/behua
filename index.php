@@ -1,77 +1,34 @@
 <!doctype html>
 <html>
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>MissBehua</title>
-<script type = "text/javascript" src = "js/jquery.js"></script>
-<script type = "text/javascript" src = "js/masonry.pkgd.min.js"></script>
-<script type = "text/javascript" src = "js/bootstrap.js"></script>
-<script type = "text/javascript" src = "js/someFunction.js"></script>
-<script type = "text/javascript" src = "js/imagesloaded.pkgd.min.js"></script>
-<link href='http://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
-<link rel = "stylesheet" type = "text/css" href = "css/bootstrap.css">
-<link rel = "stylesheet" type = "text/css" href = "css/style.css">
 
-</head>
+<?php include('header.php'); ?>
 
-<body>
-
-<!-- Navbar -->
-<nav class="navbar navbar-static-top navbar-default" role="navigation">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="/">MissWallFlower</a>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
-      <li><a href="index.html">
-          <span class = "glyphicon glyphicon-home"></span> Home
-</a>        </li>
-          <li><a href="signup.html">
-          <span class = "glyphicon glyphicon-asterisk"></span> Sign Up
-</a>          </li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Items <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="#">Crystal</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li><a href="#">Separated link</a></li>
-            <li><a href="#">One more separated link</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-
-<div class = "container">
+<!-- Appears only when people signed in -->
+<!-- <div class = "container">
   <div class = "jumbotron tbCenter">
   	<p> Welcome to Behua </p>
-  	<a class="btn btn-default" href="login.html">Log In</a>
-		<a class="btn btn-primary" href="signup.html">Sign Up</a>
-		<a class="btn btn-default" href="test.php">Testing PHP</a>
+  	<a class="btn btn-default" href="login.php">Log In</a>
+		<a class="btn btn-primary" href="signup.php">Sign Up</a>
   </div>
+</div> -->
+
+<!-- Photo Gallery, appears regardless -->
+<div class = "container">
+  <h1>Gallery</h1>
 </div>
 
-<!-- Photo Gallery -->
-<div id="masonry" class = "container-fluid">
-  <div class="item"><div class = "imgs"><img src = "images/b1.jpg" /></div></div>
-  <div class="item"><div class = "imgs"><img src = "images/b2.jpg" /></div></div>
-  <div class="item"><div class = "imgs"><img src = "images/b3.jpg" /></div></div>
-  <div class="item"><div class = "imgs"><img src = "images/b4.jpg" /></div></div>
-  <div class="item"><div class = "imgs"><img src = "images/b5.jpg" /></div></div>
+<div id="masonry" class = "container-fluid tbCenter">
+  <?php
+    for ($x = 1; $x <= 8; $x++){
+      if ($x !== 13) {
+        echo '<div class="item"><div class = "imgs"><img src = "Product/image' . $x . '.jpeg" /></div></div>';
+      }
+    }
+  ?>
 </div>
+
+<!-- The ordering part -->
+
 
 </body>
 </html>
