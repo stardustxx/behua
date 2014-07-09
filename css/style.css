@@ -5,3 +5,24 @@
 body {
     font-family: 'Noto Sans', sans-serif;
 }
+
+#masonry {
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container-fluid {
+    padding: 20px;
+}
+
+.item {
+    margin: 10px;
+    float: left;
+    width: 220px;
+}
+
+.item img {
+    max-width: 100%;
+}
+
