@@ -4,19 +4,29 @@
 <?php include('header.php'); ?>
 
 <?php
-    $x = 30;
     $today = date("y/m/d");
     echo $today . '<br>';
     echo '<h3>You have ordered: </h3>';
-    for ($each = 1; $each <= $x; $each++){
-        if ($each <= 15) {
-            if ($_POST['image' . $each] != 0) {
-                echo '<p>Canada' . $each . ": " . $_POST['image' . $each] . "<br>";
+    for ($each = 9801; $each <= 9812; $each++){
+        if ($each <= 9812) {
+            if ($_POST['spring' . $each] != 0) {
+                echo '<p>春天粉嫩' . $each . ": " . $_POST['spring' . $each] . "<br>";
             }
         }
-        elseif ($each <= 30){
-            if ($_POST['image' . $each] != 0) {
-                echo '<p>Crystal' . $each . ": " . $_POST['image' . $each] . "<br>";
+    }
+    
+    for ($each = 1301; $each <= 1370; $each++){
+        if ($each <= 1370) {
+            if ($_POST['funny' . $each] != 0) {
+                echo '<p>方妮趣味' . $each . ": " . $_POST['funny' . $each] . "<br>";
+            }
+        }
+    }
+    
+    for ($each = 1101; $each <= 1115; $each++){
+        if ($each <= 1115) {
+            if ($_POST['kids' . $each] != 0) {
+                echo '<p>可愛兒童' . $each . ": " . $_POST['kids' . $each] . "<br>";
             }
         }
     }
