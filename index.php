@@ -1,6 +1,4 @@
-<!doctype html>
-<html>
-
+ 
 <?php include('header.php'); ?>
 
 <!-- Appears only when people signed in -->
@@ -59,13 +57,11 @@
   <div class = "masonry container-fluid tbCenter">
     <?php
       for ($x = 16; $x <= 30; $x++){
-        if ($x !== 13) {
-          echo '<div class="item">';
-          echo '<div class = "imgs">';
-          echo '<img src = "Product/image' . $x . '.jpeg" />';
-          echo '<input class = "txtbox" type = "text" name = "image' . $x . '" />';
-          echo '</div></div>';
-        }
+        echo '<div class="item">';
+        echo '<div class = "imgs">';
+        echo '<img src = "Product/image' . $x . '.jpeg" />';
+        echo '<input class = "txtbox" type = "text" name = "image' . $x . '" />';
+        echo '</div></div>';
       }
     ?>
   </div>
