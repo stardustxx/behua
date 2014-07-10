@@ -19,7 +19,7 @@ body {
 .item {
     margin: 10px;
     float: left;
-    width: 150px;
+    width: 130px;
     box-shadow: 10px 10px 5px #888888;
 }
 
@@ -27,3 +27,6 @@ body {
     max-width: 100%;
 }
 
+.txtbox {
+    margin-top：50px;
+}

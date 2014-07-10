@@ -1,5 +1,5 @@
 $(function(){
-  var $container = $('#masonry');
+  var $container = $('.masonry');
   $container.imagesLoaded( function(){
     $container.masonry({
         itemSelector : '.item',
@@ -8,3 +8,4 @@ $(function(){
     });
   });
 });
+
