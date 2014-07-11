@@ -3,13 +3,13 @@
 <?php
 
     //set up a database connection
-    $dbhost = "localhost";
-    $dbuser = "stardust";
+    $dbhost = "mysql16.000webhost.com";
+    $dbuser = "a4561001_admin";
     $dbport = "3306";
-    $dbpass = "";
-    $dbname = "c9";
+    $dbpass = "admin2014";
+    $dbname = "a4561001_behua";
     
-    $connection = mysqli_connect($dbhost, $dbport, $dbuser, $dbpass, $dbname);
+    $connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
     
     //test if connection succeeded
     if(mysqli_connect_errno()){
@@ -18,6 +18,6 @@
             "(".mysqli_connect_errno().")"
             );
     }else{
-        echo nl2br("\n connect succeeded");
+        //echo nl2br("\n connect succeeded");
     }
 ?>
