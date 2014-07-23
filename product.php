@@ -1,6 +1,6 @@
 <form action = "order.php" method = "post">
-  <div>
-    <input type = "submit" type = "submit" value = "submit" />
+  <div class = "container tbCenter">
+    <input type = "submit" type = "submit" value = "submit" class = "btn btn-primary btn-lg" />
   </div>
   
   <div class = "container-fluid">

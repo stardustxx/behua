@@ -11,8 +11,8 @@
 	<div class = "panel-body">
 		<?php
 			session_destroy();
-			echo "<p>You've logged out.</p> We will redirect you back to homepage in 5 seconds!";
-			header('Refresh: 5; URL=index.php');
+			echo "<p>You've logged out.</p> We will redirect you back to homepage in 3 seconds!";
+			header('Refresh: 3; URL=index.php');
 		?>
     </div>
     </div> 

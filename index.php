@@ -30,7 +30,7 @@
 <br>
 
 <!-- Show Products -->
-<?php include('product.php'); ?>
+<?php include('showProducts.php'); ?>
 
 
 

@@ -5,12 +5,10 @@
 <script type = "text/javascript" src = "js/jquery.js"></script>
 <script type = "text/javascript" src = "js/masonry.pkgd.min.js"></script>
 <script type = "text/javascript" src = "js/bootstrap.js"></script>
-<script type = "text/javascript" src = "js/lightbox.min.js"></script>
 <script type = "text/javascript" src = "js/someFunction.js"></script>
 <script type = "text/javascript" src = "js/imagesloaded.pkgd.min.js"></script>
 <link href='http://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
 <link rel = "stylesheet" type = "text/css" href = "css/bootstrap.css">
-<link rel = "stylesheet" type = "text/css" href = "css/lightbox.css">
 <link rel = "stylesheet" type = "text/css" href = "css/style.css">
 
 </head>
@@ -40,11 +38,12 @@
 			</a>
 		</li>
 		
+		<!--
 		 <li>
 			<a href="signup.php">
 				<span class = "glyphicon glyphicon-asterisk"></span> Sign Up
 			</a>
-		</li>
+		</li>-->
 		
 		<!-- dynamic menu start -->
 		
@@ -66,7 +65,7 @@
 				//if the member_id is an administrator
 				if($_SESSION['member_id'] === "admin"){
 					printf (
-						"<li><a href='#'><span class='glyphicon glyphicon-cog'></span> Control Panel</a></li>");
+						"<li><a href='control.php'><span class='glyphicon glyphicon-cog'></span> Control Panel</a></li>");
 				}
 				
 				printf (

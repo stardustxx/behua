@@ -31,9 +31,9 @@
 					
 					if($result){
 						//success
-						echo "<p><strong>You've signed up as ".$name.". We will redirect you back to homepage in 5 seconds!";
+						echo "<p><strong>You've signed up as ".$name.". We will redirect you back to control panel in 3 seconds!";
 						//jump to secured page
-						header('Refresh:5; URL=index.php');
+						header('Refresh:3; URL=control.php');
 					}else{
 						//failure
 						die("Database query failed." . mysqli_error($connection));

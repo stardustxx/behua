@@ -57,7 +57,7 @@
 				echo "<p>";
 				echo $status;
 				echo "</p>";
-				 mysqli_close($connection); 
+				mysqli_close($connection); 
 			?>
 		</div>
 	</div>
