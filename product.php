@@ -1,6 +1,11 @@
-<form action = "order.php" method = "post">
+<form action = "order.php" method = "post" class = "content">  
   <div class = "container tbCenter">
-    <input type = "submit" type = "submit" value = "submit" class = "btn btn-primary btn-lg" />
+    <input type = "submit" value = "提交" class = "btn btn-primary btn-lg" />
+  </div>
+  <div class = "container">
+    <label for = "noteName"><h2>備註: (請勿要求沒列出的款式)</h2></label>
+    <br />
+    <textarea rows = 3 cols = 50 name = "note"></textarea>
   </div>
   
   <div class = "container-fluid">
@@ -8,16 +13,16 @@
   </div>
   <div class = "masonry container-fluid tbCenter">
     <?php
-        for ($x = 9801; $x <= 9812; $x++){
+        for ($x = 9801; $x <= 9832; $x++){
           $filename = "Product/behu9800/BEHU" . $x . ".jpg";
           if (file_exists($filename)) {
             echo '<div class="item">';
             echo '<div class = "imgs">';
             echo '<a href = "Product/behu9800/BEHU' . $x . '.jpg" data-lightbox = "spring">';
             echo '<img src = "Product/behu9800/BEHU' . $x . '.jpg" />';
-            echo '</a>';
+            echo '</a></div>';
             echo '<input class = "txtbox" type = "text" name = "spring' . $x . '" />';
-            echo '</div></div>';
+            echo '</div>';
           }
         }
     ?>
@@ -28,30 +33,16 @@
   </div>
   <div class = "masonry container-fluid tbCenter">
     <?php
-      for ($x = 1301; $x <= 1370; $x++){
-        if ($x <= 1330){
-          $filename = "Product/WF1300/WF" . $x . ".jpg";
-          if (file_exists($filename)) {
-            echo '<div class="item">';
-            echo '<div class = "imgs">';
-            echo '<a href = "Product/WF1300/WF' . $x . '.jpg" data-lightbox = "funny">';
-            echo '<img src = "Product/WF1300/WF' . $x . '.jpg" />';
-            echo '</a>';
-            echo '<input class = "txtbox" type = "text" name = "funny' . $x . '" />';
-            echo '</div></div>';
-          }
-        }
-        elseif ($x <= 1370) {
-          $filename = "Product/WF1300/BEHU" . $x . ".jpg";
-          if (file_exists($filename)) {
-            echo '<div class="item">';
-            echo '<div class = "imgs">';
-            echo '<a href = "Product/WF1300/BEHU' . $x . '.jpg" data-lightbox = "funny">';
-            echo '<img src = "Product/WF1300/BEHU' . $x . '.jpg" />';
-            echo '</a>';
-            echo '<input class = "txtbox" type = "text" name = "funny' . $x . '" />';
-            echo '</div></div>';
-          }
+      for ($x = 1301; $x <= 1399; $x++) {
+        $filename = "Product/WF1300/BEHU" . $x . ".jpg";
+        if (file_exists($filename)) {
+          echo '<div class="item">';
+          echo '<div class = "imgs">';
+          echo '<a href = "Product/WF1300/BEHU' . $x . '.jpg" data-lightbox = "funny">';
+          echo '<img src = "Product/WF1300/BEHU' . $x . '.jpg" />';
+          echo '</a></div>';
+          echo '<input class = "txtbox" type = "text" name = "funny' . $x . '" />';
+          echo '</div>';
         }
       }
     ?>
@@ -62,23 +53,23 @@
   </div>
   <div class = "masonry container-fluid tbCenter">
     <?php
-      for ($x = 1101; $x <= 1115; $x++){
+      for ($x = 1101; $x <= 1199; $x++){
           $filename = "Product/behu1100/BEHU" . $x . ".jpg";
           if (file_exists($filename)) {
             echo '<div class="item">';
             echo '<div class = "imgs">';
             echo '<a href = "Product/behu1100/BEHU' . $x . '.jpg" data-lightbox = "kids">';
             echo '<img src = "Product/behu1100/BEHU' . $x . '.jpg" />';
-            echo '</a>';
+            echo '</a></div>';
             echo '<input class = "txtbox" type = "text" name = "kids' . $x . '" />';
-            echo '</div></div>';
+            echo '</div>';
           }
         }
     ?>
   </div>
   
   <div class = "container-fluid">
-    <h1>催燦星空</h1>
+    <h1>璀璨星空</h1>
   </div>
   <div class = "masonry container-fluid tbCenter">
     <?php
@@ -89,9 +80,9 @@
             echo '<div class = "imgs">';
             echo '<a href = "Product/behu9700/BEHU' . $x . '.jpg" data-lightbox = "sky">';
             echo '<img src = "Product/behu9700/BEHU' . $x . '.jpg" />';
-            echo '</a>';
+            echo '</a></div>';
             echo '<input class = "txtbox" type = "text" name = "sky' . $x . '" />';
-            echo '</div></div>';
+            echo '</div>';
           }
         }
     ?>
@@ -102,30 +93,16 @@
   </div>
   <div class = "masonry container-fluid tbCenter">
     <?php
-        for ($x = 1601; $x <= 1620; $x++){
-          if ($x <= 1608){
-            $filename = "Product/WF1600/WF" . $x . ".jpg";
-            if (file_exists($filename)) {
-              echo '<div class="item">';
-              echo '<div class = "imgs">';
-              echo '<a href = "Product/WF1600/WF' . $x . '.jpg" data-lightbox = "cartoon">';
-              echo '<img src = "Product/WF1600/WF' . $x . '.jpg" />';
-              echo '</a>';
-              echo '<input class = "txtbox" type = "text" name = "cartoon' . $x . '" />';
-              echo '</div></div>';
-            }
-          }
-          elseif ($x <= 1620){
-            $filename = "Product/WF1600/BEHU" . $x . ".jpg";
-            if (file_exists($filename)) {
-              echo '<div class="item">';
-              echo '<div class = "imgs">';
-              echo '<a href = "Product/WF1600/BEHU' . $x . '.jpg" data-lightbox = "cartoon">';
-              echo '<img src = "Product/WF1600/BEHU' . $x . '.jpg" />';
-              echo '</a>';
-              echo '<input class = "txtbox" type = "text" name = "cartoon' . $x . '" />';
-              echo '</div></div>';
-            }
+        for ($x = 1601; $x <= 1699; $x++){
+          $filename = "Product/WF1600/BEHU" . $x . ".jpg";
+          if (file_exists($filename)) {
+            echo '<div class="item">';
+            echo '<div class = "imgs">';
+            echo '<a href = "Product/WF1600/BEHU' . $x . '.jpg" data-lightbox = "cartoon">';
+            echo '<img src = "Product/WF1600/BEHU' . $x . '.jpg" />';
+            echo '</a></div>';
+            echo '<input class = "txtbox" type = "text" name = "cartoon' . $x . '" />';
+            echo '</div>';
           }
         }
     ?>
@@ -143,9 +120,9 @@
             echo '<div class = "imgs">';
             echo '<a href = "Product/WF300/WF' . $x . '.jpg" data-lightbox = "hand">';
             echo '<img src = "Product/WF300/WF' . $x . '.jpg" />';
-            echo '</a>';
+            echo '</a></div>';
             echo '<input class = "txtbox" type = "text" name = "hand' . $x . '" />';
-            echo '</div></div>';
+            echo '</div>';
           }
         }
     ?>
@@ -164,9 +141,9 @@
               echo '<div class = "imgs">';
               echo '<a href = "Product/WF1700/WF' . $x . '.jpg" data-lightbox = "light">';
               echo '<img src = "Product/WF1700/WF' . $x . '.jpg" />';
-              echo '</a>';
+              echo '</a></div>';
               echo '<input class = "txtbox" type = "text" name = "light' . $x . '" />';
-              echo '</div></div>';
+              echo '</div>';
             }
           }
           elseif ($x <= 1720){
@@ -176,9 +153,9 @@
               echo '<div class = "imgs">';
               echo '<a href = "Product/WF1700/BEHU' . $x . '.jpg" data-lightbox = "light">';
               echo '<img src = "Product/WF1700/BEHU' . $x . '.jpg" />';
-              echo '</a>';
+              echo '</a></div>';
               echo '<input class = "txtbox" type = "text" name = "light' . $x . '" />';
-              echo '</div></div>';
+              echo '</div>';
             }
           }
         }
@@ -190,16 +167,16 @@
   </div>
   <div class = "masonry container-fluid tbCenter">
     <?php
-      for ($x = 1801; $x <= 1850; $x++){
+      for ($x = 1801; $x <= 1860; $x++){
           $filename = "Product/WF1800/WF" . $x . ".jpg";
           if (file_exists($filename)) {
             echo '<div class="item">';
             echo '<div class = "imgs">';
             echo '<a href = "Product/WF1800/WF' . $x . '.jpg" data-lightbox = "grace">';
             echo '<img src = "Product/WF1800/WF' . $x . '.jpg" />';
-            echo '</a>';
+            echo '</a></div>';
             echo '<input class = "txtbox" type = "text" name = "grace' . $x . '" />';
-            echo '</div></div>';
+            echo '</div>';
           }
         }
     ?>
@@ -210,16 +187,16 @@
   </div>
   <div class = "masonry container-fluid tbCenter">
     <?php
-      for ($x = 1901; $x <= 1915; $x++){
+      for ($x = 1901; $x <= 1999; $x++){
           $filename = "Product/WF1900/BEHU" . $x . ".jpg";
           if (file_exists($filename)) {
             echo '<div class="item">';
             echo '<div class = "imgs">';
             echo '<a href = "Product/WF1900/BEHU' . $x . '.jpg" data-lightbox = "flower">';
             echo '<img src = "Product/WF1900/BEHU' . $x . '.jpg" />';
-            echo '</a>';
+            echo '</a></div>';
             echo '<input class = "txtbox" type = "text" name = "flower' . $x . '" />';
-            echo '</div></div>';
+            echo '</div>';
           }
         }
     ?>
@@ -230,16 +207,16 @@
   </div>
   <div class = "masonry container-fluid tbCenter">
     <?php
-      for ($x = 1201; $x <= 1205; $x++){
-          $filename = "Product/WF1200/WF" . $x . ".jpg";
+      for ($x = 1201; $x <= 1230; $x++){
+          $filename = "Product/behu1200/BEHU" . $x . ".jpg";
           if (file_exists($filename)) {
             echo '<div class="item">';
             echo '<div class = "imgs">';
-            echo '<a href = "Product/WF1200/WF' . $x . '.jpg" data-lightbox = "laser">';
-            echo '<img src = "Product/WF1200/WF' . $x . '.jpg" />';
-            echo '</a>';
+            echo '<a href = "Product/behu1200/BEHU' . $x . '.jpg" data-lightbox = "laser">';
+            echo '<img src = "Product/behu1200/BEHU' . $x . '.jpg" />';
+            echo '</a></div>';
             echo '<input class = "txtbox" type = "text" name = "laser' . $x . '" />';
-            echo '</div></div>';
+            echo '</div>';
           }
         }
     ?>
@@ -257,19 +234,63 @@
             echo '<div class = "imgs">';
             echo '<a href = "Product/WF1500/WF' . $x . '.jpg" data-lightbox = "diamond">';
             echo '<img src = "Product/WF1500/WF' . $x . '.jpg" />';
-            echo '</a>';
+            echo '</a></div>';
             echo '<input class = "txtbox" type = "text" name = "diamond' . $x . '" />';
-            echo '</div></div>';
+            echo '</div>';
           }
         }
     ?>
   </div>
   
   <div class = "container-fluid">
-    <h1>甲片</h1>
+    <h1>甲片基本款</h1>
   </div>
   <div class = "masonry container-fluid tbCenter">
     <?php
+      for ($x = 5221; $x <= 5255; $x++){
+          $filename = "Product/huna5000/huna" . $x . ".jpg";
+          if ($x !== 5250 && $x !== 5255){
+            if (file_exists($filename)) {
+              echo '<div class="item">';
+              echo '<div class = "imgs">';
+              echo '<a href = "Product/huna5000/huna' . $x . '.jpg" data-lightbox = "hard">';
+              echo '<img src = "Product/huna5000/huna' . $x . '.jpg" />';
+              echo '</a></div>';
+              echo '<input class = "txtbox" type = "text" name = "hard' . $x . '" />';
+              echo '</div>';
+            }
+          }
+        }
+    ?>
+  </div>
+
+  <div class = "container-fluid">
+    <h1>甲片新娘款</h1>
+  </div>
+  <div class = "masonry container-fluid tbCenter">
+    <?php 
+      for ($x = 5221; $x <= 5255; $x++){
+          $filename = "Product/huna5000/huna" . $x . ".jpg";
+          if ($x == 5250 || $x == 5255) {
+            if (file_exists($filename)) {
+              echo '<div class="item">';
+              echo '<div class = "imgs">';
+              echo '<a href = "Product/huna5000/huna' . $x . '.jpg" data-lightbox = "marry">';
+              echo '<img src = "Product/huna5000/huna' . $x . '.jpg" />';
+              echo '</a></div>';
+              echo '<input class = "txtbox" type = "text" name = "marry' . $x . '" />';
+              echo '</div>';
+            }
+          }
+        } 
+    ?>
+  </div>
+
+  <!--<div class = "container-fluid">
+    <h1>甲片美腳款</h1>
+  </div>
+  <div class = "masonry container-fluid tbCenter">
+    <?php /*
       for ($x = 5221; $x <= 5255; $x++){
           $filename = "Product/huna5000/huna" . $x . ".jpg";
           if (file_exists($filename)) {
@@ -277,15 +298,113 @@
             echo '<div class = "imgs">';
             echo '<a href = "Product/huna5000/huna' . $x . '.jpg" data-lightbox = "hard">';
             echo '<img src = "Product/huna5000/huna' . $x . '.jpg" />';
-            echo '</a>';
+            echo '</a></div>';
             echo '<input class = "txtbox" type = "text" name = "hard' . $x . '" />';
-            echo '</div></div>';
+            echo '</div>';
           }
-        }
+        } */
+    ?>
+  </div>-->
+
+  <!--<div class = "container-fluid">
+    <h1>指緣油</h1>
+  </div>
+  <div class = "masonry container-fluid tbCenter">
+    <?php /*
+      $oilItems = array(10001 =>  "guihua", "juzi", "ningmeng", "yingtao", "shuimitao", "meigui", "baihe", "moli", "caomei", "xunyicao", "lanmei", "qingpingguo");
+      for ($x = 10001; $x <= 10012; $x++){
+          $filename = "Product/EO/BEHU" . $oilItems[$x] . ".jpg";
+          if (file_exists($filename)) {
+            echo '<div class="item">';
+            echo '<div class = "imgs">';
+            echo '<a href = "Product/EO/BEHU' . $oilItems[$x] . '.jpg" data-lightbox = "oil">';
+            echo '<img src = "Product/EO/BEHU' . $oilItems[$x] . '.jpg" />';
+            echo '</a></div>';
+            echo '<input class = "txtbox" type = "text" name = "oil' . $x . '" />';
+            echo '</div>';
+          }
+        } */
+    ?>
+  </div>-->
+
+  <div class = "container-fluid">
+    <h1>搓刀</h1>
+  </div>
+  <div class = "masonry container-fluid tbCenter">
+    <?php /*
+      for ($x = 5221; $x <= 5255; $x++){
+          $filename = "Product/huna5000/huna" . $x . ".jpg";
+          if (file_exists($filename)) {
+            echo '<div class="item">';
+            echo '<div class = "imgs">';
+            echo '<a href = "Product/huna5000/huna' . $x . '.jpg" data-lightbox = "hard">';
+            echo '<img src = "Product/huna5000/huna' . $x . '.jpg" />';
+            echo '</a></div>';
+            echo '<input class = "txtbox" type = "text" name = "hard' . $x . '" />';
+            echo '</div>';
+          }
+        } */
     ?>
   </div>
-  
-  
-  
-  
+
+  <div class = "container-fluid">
+    <h1>說明書及袋子</h1>
+  </div>
+  <div class = "masonry container-fluid tbCenter">
+    <?php 
+      $stuff = array(20001 => "Manual");
+      for ($x = 20001; $x <= 200002; $x++){
+          $filename = "Product/essential/" . $stuff[$x] . ".jpg";
+          if (file_exists($filename)) {
+            echo '<div class="item">';
+            echo '<div class = "imgs">';
+            echo '<a href = "Product/essential/' . $stuff[$x] . '.jpg" data-lightbox = "essential">';
+            echo '<img src = "Product/essential/' . $stuff[$x] . '.jpg" />';
+            echo '</a></div>';
+            echo '<input class = "txtbox" type = "text" name = "essential' . $stuff[$x] . '" />';
+            echo '</div>';
+          }
+        } 
+    ?>
+  </div>
+
+  <div class = "container-fluid">
+    <h1>日本美甲專用雙面膠</h1>
+  </div>
+  <div class = "masonry container-fluid tbCenter">
+    <?php /*
+      for ($x = 5221; $x <= 5255; $x++){
+          $filename = "Product/huna5000/huna" . $x . ".jpg";
+          if (file_exists($filename)) {
+            echo '<div class="item">';
+            echo '<div class = "imgs">';
+            echo '<a href = "Product/huna5000/huna' . $x . '.jpg" data-lightbox = "hard">';
+            echo '<img src = "Product/huna5000/huna' . $x . '.jpg" />';
+            echo '</a></div>';
+            echo '<input class = "txtbox" type = "text" name = "hard' . $x . '" />';
+            echo '</div>';
+          }
+        } */
+    ?>
+  </div>
+
+  <div class = "container-fluid">
+    <h1>透明甲盤</h1>
+  </div>
+  <div class = "masonry container-fluid tbCenter">
+    <?php /*
+      for ($x = 5221; $x <= 5255; $x++){
+          $filename = "Product/huna5000/huna" . $x . ".jpg";
+          if (file_exists($filename)) {
+            echo '<div class="item">';
+            echo '<div class = "imgs">';
+            echo '<a href = "Product/huna5000/huna' . $x . '.jpg" data-lightbox = "hard">';
+            echo '<img src = "Product/huna5000/huna' . $x . '.jpg" />';
+            echo '</a></div>';
+            echo '<input class = "txtbox" type = "text" name = "hard' . $x . '" />';
+            echo '</div>';
+          }
+        } */
+    ?>
+  </div>
 </form>

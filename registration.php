@@ -18,22 +18,20 @@
 			<?php
 				//echo $_POST['commit'];
 				$name = $_POST['username'];
-				$email = $_POST['useremail'];
 				$pass = "{$_POST['userpassword']}";
 				$passHash = sha1('%^$sd%MDdF)@I#)3asd3223#@4*^&(*&@#'.$pass);
 				//if name, email and pass and passConfirm not empty
-				if(!empty($name) and !empty($email) and !empty($pass)){
+				if(!empty($name) and !empty($pass)){
 					//perform database query
-					$query = "INSERT INTO users(name, email, password)
-									VALUES('{$name}', '{$email}', '{$passHash}')";
+					$query = "INSERT INTO users(name, password)
+									VALUES('{$name}', '{$passHash}')";
 					
 					$result = mysqli_query($connection, $query);
 					
 					if($result){
 						//success
-						echo "<p><strong>You've signed up as ".$name.". We will redirect you back to control panel in 3 seconds!";
 						//jump to secured page
-						header('Refresh:3; URL=control.php');
+						header('Location: control.php');
 					}else{
 						//failure
 						die("Database query failed." . mysqli_error($connection));

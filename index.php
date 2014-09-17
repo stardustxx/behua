@@ -1,3 +1,5 @@
+ <DOCTYPE HTML>
+ <html>
  
 <?php include('header.php'); ?>
 
@@ -10,29 +12,18 @@
   </div>
 </div> -->
 
-<!-- Photo Gallery, appears regardless -->
-<div class = "container-fluid">
-  <h1>New Items</h1>
-</div>
-
-<div class = "masonry container-fluid tbCenter">
-  <?php /*
-    for ($x = 1; $x <= 15; $x++){
-      if ($x !== 13) {
-        echo '<div class="item">';
-        echo '<div class = "imgs">';
-        echo '<img src = "Product/image' . $x . '.jpeg" />';
-        echo '</div></div>';
-      }
-    } */
-  ?> 
-</div>
-<br>
-
 <!-- Show Products -->
-<?php include('showProducts.php'); ?>
 
+<?php 
+if(!isset($_SESSION['member_id'])){
+	//jump to log in page
+	header('Location: login.php');
+  }else{
+	include('product.php');
+  }
+?>
 
+<?php include('footer.php') ?>
 
 </body>
 </html>

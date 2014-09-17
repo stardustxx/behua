@@ -23,6 +23,12 @@ body {
     box-shadow: 10px 10px 5px #888888;
 }
 
+.imgs {
+	width: auto;
+	height: 100px;
+	overflow: hidden;
+}
+
 .imgs img {
     max-width: 100%;
 }
@@ -30,4 +36,17 @@ body {
 .txtbox {
     width: 130px;
     margin-top：50px;
+}
+
+.navbar, .content {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo {
+    margin-top: -20px;
+    margin-bottom: 0px;
+    padding: 0px;
+    max-width: 100%;
 }

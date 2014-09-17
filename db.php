@@ -3,11 +3,11 @@
 <?php
 
     //set up a database connection
-    $dbhost = "mysql16.000webhost.com";
-    $dbuser = "a4561001_admin";
-    $dbport = "3306";
-    $dbpass = "admin2014";
-    $dbname = "a4561001_behua";
+    $dbhost = "localhost";
+    $dbuser = "czlqzgvp_order";
+    $dbport = "2083";
+    $dbpass = "star11panda";
+    $dbname = "czlqzgvp_order";
     
     $connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
     
